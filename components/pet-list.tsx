@@ -2,6 +2,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { supabase } from '@/supabase'
+import Image from "next/image"
 import { useEffect, useState } from 'react'
 
 interface Mascota {
@@ -42,7 +43,7 @@ export default function ListaMascotas() {
             <CardTitle>{mascota.nombre}</CardTitle>
           </CardHeader>
           <CardContent>
-            <img
+            <Image
               src={`${supabase.storage.from('mascotas').getPublicUrl(mascota.imagen_url).data.publicUrl}`}
               alt={mascota.nombre}
               className="w-full h-48 object-cover mb-2"

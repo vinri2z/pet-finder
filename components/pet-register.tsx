@@ -29,7 +29,7 @@ export default function RegistroMascota() {
       if (imageError) throw imageError
 
       // Insertar los datos de la mascota en la base de datos
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('pets')
         .insert([
           { nombre, tipo, raza, estado, imagen_url: imageData?.path },
