@@ -1,5 +1,5 @@
-import PetFinder from '../components/pet-finder'
+import { AppComponent } from '@/components/app'
 
 export default function Home() {
-  return <PetFinder />
+  return <AppComponent />
 }
